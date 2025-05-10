@@ -1,24 +1,28 @@
 body {
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('images/background.jpg'); /* Замініть на шлях до вашого фонового зображення */
+    background-image: url('images/background.jpg'); /* Замініть на свій фон */
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed; /* Фіксований фон */
     color: #333;
+    line-height: 1.6;
 }
 
 header {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9); /* Трохи прозорий білий */
     padding: 20px;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     margin: 0;
+    color: #2c3e50; /* Темно-синій колір заголовка */
 }
 
 .cart-widget {
@@ -26,86 +30,157 @@ header h1 {
     top: 20px;
     right: 20px;
     font-size: 1.2em;
+    color: #3498db; /* Синій колір кошика */
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.cart-widget:hover {
+    transform: scale(1.1);
 }
 
 .cart-icon {
-    cursor: pointer;
+    margin-right: 5px;
+}
+
+.cart-count {
+    background-color: #e74c3c; /* Червоний колір лічильника */
+    color: white;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 0.8em;
+    position: relative;
+    top: -5px;
+    left: 2px;
 }
 
 main {
     display: flex;
-    padding: 20px;
+    padding: 30px;
     max-width: 1200px;
-    margin: 20px auto;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    background-color: rgba(255, 255, 255, 0.95); /* Ще трохи прозоріший */
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Збільшено мінімальну ширину */
+    gap: 25px;
     flex-grow: 1;
-    padding-right: 20px;
+    padding-right: 30px;
     border-right: 1px solid #eee;
 }
 
 .product-card {
     border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 5px;
+    padding: 20px;
+    border-radius: 8px;
     text-align: center;
     background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .product-card img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
 }
 
 .product-card h3 {
     margin-top: 0;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    color: #333;
 }
 
 .price {
-    color: green;
+    color: #27ae60; /* Зелений колір ціни */
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    font-size: 1.1em;
 }
 
 .add-to-cart {
-    background-color: #007bff;
+    background-color: #3498db; /* Синій колір кнопки */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.95em;
+}
+
+.add-to-cart:hover {
+    background-color: #2980b9;
+}
+
+.view-details {
+    display: block;
+    margin-top: 10px;
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.view-details:hover {
+    text-decoration: underline;
+    color: #2980b9;
+}
+
+.sidebar {
+    width: 280px; /* Збільшено ширину бічної панелі */
+    padding-left: 30px;
+}
+
+.filter-widget, .popular-widget {
+    margin-bottom: 25px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.filter-widget h3, .popular-widget h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+}
+
+.filter-widget label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.filter-widget input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.filter-widget button {
+    background-color: #f39c12; /* Помаранчевий колір кнопки фільтра */
     color: white;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 0.9em;
+    margin-top: 10px;
 }
 
-.add-to-cart:hover {
-    background-color: #0056b3;
-}
-
-.sidebar {
-    width: 250px;
-    padding-left: 20px;
-}
-
-.filter-widget, .popular-widget {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
-
-.filter-widget h3, .popular-widget h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
+.filter-widget button:hover {
+    background-color: #e67e22;
 }
 
 .popular-widget ul {
@@ -114,15 +189,123 @@ main {
 }
 
 .popular-widget li {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.popular-widget li a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.popular-widget li a:hover {
+    color: #2980b9;
+    text-decoration: underline;
 }
 
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
     position: sticky;
     bottom: 0;
     width: 100%;
     z-index: 100;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    color: #777;
+    font-size: 0.9em;
+}
+
+/* Стилі для сторінки деталей товару */
+.product-details {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+.product-details img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-details .details {
+    flex-grow: 1;
+}
+
+.product-details h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    font-size: 2em;
+}
+
+.product-details .price.large {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.product-details .description {
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.product-details .add-to-cart {
+    margin-bottom: 30px;
+    font-size: 1em;
+    padding: 15px 25px;
+    border-radius: 10px;
+}
+
+.product-details .additional-info h3 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.product-details .additional-info ul {
+    list-style: disc;
+    padding-left: 25px;
+    color: #555;
+}
+
+/* Адаптивний дизайн */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        padding-right: 0;
+        border-right: none;
+        margin-bottom: 20px;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .product-details {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .product-details img {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
 }
