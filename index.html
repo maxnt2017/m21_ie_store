@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мій Магазин</title>
+    <title>Мій магазин</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,17 +17,19 @@
 
     <main>
         <div class="product-grid">
-            <div class="product-card">
+            <div class="product-card" data-product-id="1">
                 <img src="images/product1.jpg" alt="Товар 1">
                 <h3>Назва Товару 1</h3>
                 <p class="price">199 грн</p>
                 <button class="add-to-cart" data-id="1" data-name="Назва Товару 1" data-price="199">Додати в кошик</button>
+                <a href="product1.html" class="view-details">Детальніше</a>
             </div>
-            <div class="product-card">
+            <div class="product-card" data-product-id="2">
                 <img src="images/product2.jpg" alt="Товар 2">
                 <h3>Назва Товару 2</h3>
                 <p class="price">249 грн</p>
                 <button class="add-to-cart" data-id="2" data-name="Назва Товару 2" data-price="249">Додати в кошик</button>
+                <a href="product2.html" class="view-details">Детальніше</a>
             </div>
             </div>
 
@@ -42,8 +44,8 @@
             <div class="popular-widget">
                 <h3>Популярні товари</h3>
                 <ul>
-                    <li><a href="#">Товар A</a></li>
-                    <li><a href="#">Товар Б</a></li>
+                    <li><a href="productA.html">Товар A</a></li>
+                    <li><a href="productB.html">Товар Б</a></li>
                     </ul>
             </div>
         </aside>
