@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій Магазин</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Мій Чудовий Магазин</h1>
+        <div class="cart-widget">
+            <span class="cart-icon">🛒</span>
+            <span class="cart-count">0</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="images/product1.jpg" alt="Товар 1">
+                <h3>Назва Товару 1</h3>
+                <p class="price">199 грн</p>
+                <button class="add-to-cart" data-id="1" data-name="Назва Товару 1" data-price="199">Додати в кошик</button>
+            </div>
+            <div class="product-card">
+                <img src="images/product2.jpg" alt="Товар 2">
+                <h3>Назва Товару 2</h3>
+                <p class="price">249 грн</p>
+                <button class="add-to-cart" data-id="2" data-name="Назва Товару 2" data-price="249">Додати в кошик</button>
+            </div>
+            </div>
+
+        <aside class="sidebar">
+            <div class="filter-widget">
+                <h3>Фільтри</h3>
+                <label><input type="checkbox" name="category" value="electronics"> Електроніка</label><br>
+                <label><input type="checkbox" name="category" value="clothing"> Одяг</label><br>
+                <button id="apply-filters">Застосувати</button>
+            </div>
+
+            <div class="popular-widget">
+                <h3>Популярні товари</h3>
+                <ul>
+                    <li><a href="#">Товар A</a></li>
+                    <li><a href="#">Товар Б</a></li>
+                    </ul>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Мій Магазин</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
